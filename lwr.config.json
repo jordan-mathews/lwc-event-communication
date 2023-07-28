@@ -1,0 +1,27 @@
+{
+  "lwc": {
+    "modules": [
+      { "dir": "$rootDir/src/modules" },
+      { "npm": "lightning-base-components" }
+    ]
+  },
+  "bundleConfig": { "exclude": ["lwc"] },
+  "routes": [
+    {
+      "id": "main",
+      "path": "/",
+      "rootComponent": "main/app",
+      "layoutTemplate": "$layoutsDir/index.html",
+      "bootstrap": {
+        "syntheticShadow": true
+      }
+    }
+  ],
+  "assets": [
+    {
+      "alias": "sldsDir",
+      "dir": "$rootDir/node_modules/@salesforce-ux/design-system/assets",
+      "urlPath": "/slds"
+    }
+  ]
+}

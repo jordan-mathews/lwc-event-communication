@@ -1,0 +1,35 @@
+{
+  "name": "component-communication",
+  "version": "0.0.1",
+  "license": "MIT",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "clean": "rm -rf node_modules __lwr_cache__ site",
+    "dev": "lwr dev",
+    "dev:compat": "lwr dev --mode compat",
+    "build": "lwr build --clean",
+    "slds": "`node ./scripts/copy-slds.mjs`",
+    "build:prod-compat": "lwr build --clean --mode prod-compat",
+    "start": "lwr start",
+    "stage": "yarn build && yarn start",
+    "stage:prod-compat": "yarn build:prod-compat && yarn start"
+  },
+  "dependencies": {
+    "@lwc/synthetic-shadow": "^3.1.0",
+    "cpx": "^1.5.0",
+    "lightning-base-components": "^1.18.8-alpha",
+    "lwc": "3.0.0",
+    "lwc-recipes-oss-ui-components": "^0.3.2",
+    "lwr": "0.10.2"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "volta": {
+    "node": "18.16.1"
+  },
+  "devDependencies": {
+    "@salesforce-ux/design-system": "^2.21.5"
+  }
+}
